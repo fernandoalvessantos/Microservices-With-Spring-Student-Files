@@ -39,7 +39,10 @@
     </dependencyManagement>
     
 	<dependencies>
-	
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
 		<!-- Needed since 1.0.2 -->
 		<dependency>
         	<groupId>org.springframework.cloud</groupId>

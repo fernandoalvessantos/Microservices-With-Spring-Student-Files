@@ -1,5 +1,6 @@
 package demo.service;
 
+import demo.dao.NounClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ public class SentenceServiceImpl implements SentenceService {
 	private WordDao subjectService;
 	private WordDao articleService;
 	private WordDao adjectiveService;
-	private WordDao nounService;
+	private NounClient nounClientService;
 	
 
 	/**
@@ -31,7 +32,7 @@ public class SentenceServiceImpl implements SentenceService {
 				verbService.getWord().getString(),
 				articleService.getWord().getString(),
 				adjectiveService.getWord().getString(),
-				nounService.getWord().getString() );
+				nounClientService.getWord().getString() );
 		return sentence;
 	}
 
@@ -57,8 +58,8 @@ public class SentenceServiceImpl implements SentenceService {
 	}
 
 	@Autowired
-	public void setNounService(WordDao nounService) {
-		this.nounService = nounService;
+	public void setNounClientService(NounClient nounClientService) {
+		this.nounClientService = nounClientService;
 	}	
 	
 	

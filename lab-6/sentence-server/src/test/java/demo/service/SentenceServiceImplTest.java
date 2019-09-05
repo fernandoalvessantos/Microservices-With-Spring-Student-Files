@@ -1,5 +1,6 @@
 package demo.service;
 
+import demo.dao.NounClient;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,13 +29,13 @@ public class SentenceServiceImplTest {
 		WordDao verb = Mockito.mock(VerbDaoImpl.class);
 		WordDao article = Mockito.mock(ArticleDaoImpl.class);
 		WordDao adjective = Mockito.mock(AdjectiveDaoImpl.class);
-		WordDao noun = Mockito.mock(NounDaoImpl.class);
+		NounClient noun = Mockito.mock(NounClient.class);
 
 		service.setSubjectService(subject);
 		service.setVerbService(verb);
 		service.setArticleService(article);
 		service.setAdjectiveService(adjective);
-		service.setNounService(noun);
+		service.setNounClientService(noun);
 		
 		//	Describe Mock Behaviors:
 		Mockito.when(subject.getWord()).thenReturn(new Word("1"));
